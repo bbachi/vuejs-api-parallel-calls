@@ -34,17 +34,17 @@ app.use(express.static(path.join(__dirname, '../my-app/build')));
 
 app.get('/api/users', (req, res) => {
   console.log('api/users called!')
-  res.json(users);
+  setTimeout(() => res.json(users), 2000);
 });
 
 app.get('/api/contacts', (req, res) => {
   console.log('api/contacts called!')
-  res.json(contacts);
+  setTimeout(() => res.json(contacts), 4000);
 });
 
 app.get('/api/addresses', (req, res) => {
   console.log('api/addresses called!')
-  res.json(addresses);
+  setTimeout(() => res.json(addresses), 6000);
 });
 
 app.get('/', (req,res) => {
